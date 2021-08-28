@@ -5,32 +5,7 @@
   "description": "该订阅兼容BoxJs以及QX Gallery",
   "author": "整理",
   "icon": "https://avatars2.githubusercontent.com/u/53217160",
-  "repo": "https://gitee.com/passerby-b/javascript/raw/master/JD/passerby-b.boxjs.json",
   "apps": [{
-    "id": "多合一签到",
-    "name": "京东",
-    "keys": ["CookiesJD"],
-    "settings": [{
-      "id": "CookiesJD",
-      "name": "Cookie列表",
-      "val": "",
-      "type": "textarea",
-      "autoGrow": false,
-      "rows": 9,
-      "val": "[\n  {\n    \"cookie\": \"此处填写账号1 Cookie\"\n  },\n  {\n    \"cookie\": \"此处填写账号2 Cookie\",\n    \"jrBody\": \"此处填写账号2 钢镚Body\"\n  }\n]",
-      "placeholder": "[ {\"cookie\": \"pt_key=xxx;pt_pin=yyy;\", \"jrBody\": \"reqData=zzz\"}  ]",
-      "desc": "Cookie和钢镚签到Body列表, 如需修改请严格按照JSON格式填写; \"cookie\"为必须, 其他为可选."
-    }],
-    "scripts": [{
-      "name": "京东签到",
-      "script": "https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js"
-    }],
-    "author": "@NobyDa",
-    "repo": "https://github.com/NobyDa/Script/tree/master/JD-DailyBonus",
-    "icons": ["https://raw.githubusercontent.com/NobyDa/mini/master/Alpha/jd.png", "https://raw.githubusercontent.com/NobyDa/mini/master/Color/jd.png"]
-  },
-           
-    {
       "id": "JD_Cookies",
       "name": "京东多账号 Ck 管理",
       "keys": ["CookiesJD"],
