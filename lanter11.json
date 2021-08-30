@@ -2,7 +2,6 @@
 {
   "id": "lanter11",
   "name": "自用脚本订阅",
-  "description": "该订阅兼容BoxJs以及QX Gallery",
   "author": "整理",
   "icon": "https://raw.githubusercontent.com/lanternook/lanternook/main/icon.webp",
   "apps": [{
@@ -27,8 +26,7 @@
     "author": "@NobyDa",
     "repo": "https://github.com/NobyDa/Script/tree/master/JD-DailyBonus",
     "icons": ["https://raw.githubusercontent.com/NobyDa/mini/master/Alpha/jd.png", "https://raw.githubusercontent.com/NobyDa/mini/master/Color/jd.png"]
-  }
- ]
+  }]
 }
 
 
