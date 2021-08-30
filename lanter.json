@@ -77,7 +77,63 @@
         "https://raw.githubusercontent.com/58xinian/icon/master/xmyd_mini.png",
         "https://raw.githubusercontent.com/58xinian/icon/master/xmyd.png"
       ]
-    }
+    },
+   {
+      "id": "didi_fruit",
+      "name": "滴滴橙心果园",
+      "keys": [
+        "ddtoken"
+      ],
+      "descs_html": [
+        "填写token,多账号用英文逗号(,)分开"
+      ],
+      "settings": [
+        {
+          "id": "ddtoken",
+          "name": "token",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 8,
+          "desc": "token"
+        }
+      ],
+      "icons": [
+        "https://gitee.com/passerby-b/javascript/raw/master/icon/didi.png",
+        "https://gitee.com/passerby-b/javascript/raw/master/icon/didi.png"
+      ],
+      "author": "@passerby-b",
+      "repo": "https://gitee.com/passerby-b/javascript/raw/master/JD/passerby-b.boxjs.json",
+      "script": "https://raw.githubusercontent.com/passerby-b/didi_fruit/main/dd_fruit.js"
+    },
+    {
+      "id": "ks_fruit",
+      "name": "快手果园",
+      "keys": [
+        "kscookies"
+      ],
+      "descs_html": [
+        "填写cookie,多账号用英文逗号(,)分开"
+      ],
+      "settings": [
+        {
+          "id": "kscookies",
+          "name": "kscookies",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 8,
+          "desc": "kscookies"
+        }
+      ],
+      "icons": [
+        "https://gitee.com/passerby-b/javascript/raw/master/icon/ks.png",
+        "https://gitee.com/passerby-b/javascript/raw/master/icon/ks.png"
+      ],
+      "author": "@passerby-b",
+      "repo": "https://gitee.com/passerby-b/javascript/raw/master/JD/passerby-b.boxjs.json",
+      "script": "https://raw.githubusercontent.com/passerby-b/ks_fruit/main/ks_fruit.js"
+    }    
 
   ]
 }
