@@ -1,9 +1,8 @@
 {
-  "id": "lxk0301.app.sub",
-  "name": "lxk0301脚本订阅",
+  "id": "lanter11",
+  "name": "自用脚本订阅",
   "author": "@lxk0301",
   "icon": "https://avatars0.githubusercontent.com/u/21308593?s=52&v=4",
-  "repo": "https://github.com/lxk0301/jd_scripts/",
   "apps": [
     {
       "id": "JD_Cookies",
@@ -19,12 +18,12 @@
           "id": "CookiesJD",
           "name": "CK 列表",
           "val": "",
-      "type": "textarea",
-      "autoGrow": false,
-      "rows": 9,
-      "val": "[\n  {\n    \"cookie\": \"此处填写账号1 Cookie\"\n  },\n  {\n    \"cookie\": \"此处填写账号2 Cookie\",\n    \"jrBody\": \"此处填写账号2 钢镚Body\"\n  }\n]",
-      "placeholder": "[ {\"cookie\": \"pt_key=xxx;pt_pin=yyy;\", \"jrBody\": \"reqData=zzz\"}  ]",
-      "desc": "Cookie和钢镚签到Body列表, 如需修改请严格按照JSON格式填写; \"cookie\"为必须, 其他为可选."
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 9,
+          "val": "[\n  {\n    \"cookie\": \"此处填写账号1 Cookie\"\n  },\n  {\n    \"cookie\": \"此处填写账号2 Cookie\",\n    \"jrBody\": \"此处填写账号2 钢镚Body\"\n  }\n]",
+          "placeholder": "[ {\"cookie\": \"pt_key=xxx;pt_pin=yyy;\", \"jrBody\": \"reqData=zzz\"}  ]",
+          "desc": "Cookie和钢镚签到Body列表, 如需修改请严格按照JSON格式填写; \"cookie\"为必须, 其他为可选."
         }
       ],
     "scripts": [{
