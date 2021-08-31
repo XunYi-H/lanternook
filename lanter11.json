@@ -1,8 +1,8 @@
 {
   "id": "lanter11",
   "name": "自用脚本订阅",
-  "author": "@lxk0301",
-  "icon": "https://avatars0.githubusercontent.com/u/21308593?s=52&v=4",
+  "author": "lanter11",
+  "icon": "https://raw.githubusercontent.com/58xinian/icon/master/xmyd_mini.png",
   "apps": [
     {
       "id": "JD_Cookies",
@@ -13,6 +13,10 @@
         "脚本地址【<a href=\"https://raw.githubusercontent.com/lxk0301/jd_scripts/master/JD_extra_cookie.js\">京东多 CK获取</a>】,并按照此脚本注释进行配置",
         "使用方式【<a href=\"https://home.m.jd.com/myJd/newhome.action\">个人中心</a>】获取对应的数据Code"
       ],
+    "scripts": [{
+      "name": "京东签到",
+      "script": "https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js"
+    }],
       "settings": [
         {
           "id": "CookiesJD",
@@ -26,10 +30,6 @@
           "desc": "Cookie和钢镚签到Body列表, 如需修改请严格按照JSON格式填写; \"cookie\"为必须, 其他为可选."
         }
       ],
-    "scripts": [{
-      "name": "京东签到",
-      "script": "https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js"
-    }],
       "icons": [
         "https://raw.githubusercontent.com/Orz-3/mini/master/jd.png",
         "https://raw.githubusercontent.com/Orz-3/task/master/jd.png"
