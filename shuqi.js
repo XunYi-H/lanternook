@@ -2605,22 +2605,24 @@ function sign(timeout = 0) {
 function resource(timeout = 0) {
     return new Promise((resolve) => {
         setTimeout(() => {
+			/*
             let url = {
-				/*
                 url: `https://render.shuqireader.com/load/resource`,
                 headers: {
                     'Content-Type': `application/x-www-form-urlencoded`,
                     'Host': `render.shuqireader.com`,
                 },
-				*/
-
-                url: `https://ocean.shuqireader.com/api/ad/v1/api/prize/readpage/pendant/lottery`,
-                headers: {
-					'Content-Type': `application/x-www-form-urlencoded`,
-                    'Host': `ocean.shuqireader.com`,
-				},
                 body: shuqirwbodyVal,
             }
+			*/
+            let url = {
+                url: `https://ocean.shuqireader.com/api/render/load/resource`,
+                headers: {
+                    'Content-Type': `application/x-www-form-urlencoded`,
+                    'Host': `ocean.shuqireader.com`,
+                },
+                body: shuqirwbodyVal,
+            }			
             $.post(url, async (err, resp, data) => {
                 try {
                     if (logs) $.log(`${O}, 任务列表🚩: ${decodeUnicode(data)}`);
@@ -3116,21 +3118,24 @@ function jsqdvideo(timeout = 0) {
 function jsresource(timeout = 0) {
     return new Promise((resolve) => {
         setTimeout(() => {
+			/*
             let url = {
-				/*
                 url: `https://render.shuqireader.com/load/resource`,
                 headers: {
                     'Content-Type': `application/x-www-form-urlencoded`,
                     'Host': `render.shuqireader.com`,
                 },
-				*/
+                body: shuqirwbodyVal,
+            }
+			*/
+            let url = {
                 url: `https://ocean.shuqireader.com/api/render/load/resource`,
                 headers: {
                     'Content-Type': `application/x-www-form-urlencoded`,
                     'Host': `ocean.shuqireader.com`,
                 },
-				body: shuqijsrwbodyVal,
-            }
+                body: shuqijsrwbodyVal,
+            }						
             $.post(url, async (err, resp, data) => {
                 try {
                     if (logs) $.log(`${O}, 极速版任务列表🚩: ${decodeUnicode(data)}`);
