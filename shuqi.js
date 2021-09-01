@@ -1,9 +1,30 @@
-/* 
+/*
 作者:ziye 
 github地址 https://github.com/ziye888
 
+###############################
+20210901 lanter&玻璃杯 修复任务列表错误,视频获取错误
+###############################
+[rewrite_local]
+#书旗小说获取header
+#用户名  视频任务 抽奖页面 极速版签到视频页   极速版视频任务
+https:\/\/ocean\.shuqireader\.com\/* url script-request-header https://raw.githubusercontent.com/lanternook/lanternook/main/shuqi.js
+#极速版书城
+http:\/\/activity-center-web\.shuqireader\.com\/* url script-request-header https://raw.githubusercontent.com/lanternook/lanternook/main/shuqi.js
 
-20210901 lanter&玻璃杯 修复阅读错误,视频获取错误
+#书旗小说获取body
+#阅读 签到  分享 奖励 收取奖励  抽奖次数 抽奖 极速版视频 极速版签到视频 极速版阅读 极速版签到 极速版分享 极速版书城
+#https:\/\/ocean\.shuqireader\.com\/* url script-request-body https://raw.githubusercontent.com/lanternook/lanternook/main/shuqi.js
+#收益 任务 极速版任务
+#https:\/\/render\.shuqireader\.com\/* url script-request-body https://raw.githubusercontent.com/lanternook/lanternook/main/shuqi.js
+#时长
+#https:\/\/jcollection\.shuqireader\.com\/* url script-request-body https://raw.githubusercontent.com/lanternook/lanternook/main/shuqi.js
+
+[task_local]
+#书旗
+7 0-23 * * * https://raw.githubusercontent.com/lanternook/lanternook/main/shuqi.js, tag=书旗小说ziye版, img-url=https://ghproxy.com/https://raw.githubusercontent.com/CenBoMin/GithubSync/main/SHUQI/shuqi.png, enabled=true
+
+###############################
 
 ⚠️书旗小说     手机号账号数据共通， 部分任务可叠加，此脚本包含2个app的所有任务（无阅读挑战赛）共0.8-1元
 书旗普通版 支持多平台账号以及手机号登录     
@@ -2585,11 +2606,19 @@ function resource(timeout = 0) {
     return new Promise((resolve) => {
         setTimeout(() => {
             let url = {
-                url: `https://ocean.shuqireader.com/api/render/load/resource`,
+				/*
+                url: `https://render.shuqireader.com/load/resource`,
                 headers: {
                     'Content-Type': `application/x-www-form-urlencoded`,
-                    'Host': `ocean.shuqireader.com`,
+                    'Host': `render.shuqireader.com`,
                 },
+				*/
+
+                url: `https://ocean.shuqireader.com/api/ad/v1/api/prize/readpage/pendant/lottery`,
+                headers: {
+					'Content-Type': `application/x-www-form-urlencoded`,
+                    'Host': `ocean.shuqireader.com`,
+				},
                 body: shuqirwbodyVal,
             }
             $.post(url, async (err, resp, data) => {
@@ -3088,12 +3117,19 @@ function jsresource(timeout = 0) {
     return new Promise((resolve) => {
         setTimeout(() => {
             let url = {
+				/*
                 url: `https://render.shuqireader.com/load/resource`,
                 headers: {
                     'Content-Type': `application/x-www-form-urlencoded`,
                     'Host': `render.shuqireader.com`,
                 },
-                body: shuqijsrwbodyVal,
+				*/
+                url: `https://ocean.shuqireader.com/api/render/load/resource`,
+                headers: {
+                    'Content-Type': `application/x-www-form-urlencoded`,
+                    'Host': `ocean.shuqireader.com`,
+                },
+				body: shuqijsrwbodyVal,
             }
             $.post(url, async (err, resp, data) => {
                 try {
