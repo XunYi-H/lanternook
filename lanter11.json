@@ -136,7 +136,7 @@
       "id": "joy_run",
       "name": "宠汪汪",
       "keys": [
-        "LKYLToken"
+        "jdJoyRunToken"
       ],
       "descs_html": [
         "填写LKYLToken"
@@ -145,7 +145,7 @@
         {
           "id": "LKYLToken",
           "name": "LKYLToken",
-          "val": "",
+          "val": "jdJoyRunToken",
           "type": "textarea",
           "autoGrow": true,
           "rows": 1,
