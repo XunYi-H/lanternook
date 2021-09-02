@@ -132,6 +132,34 @@
       "repo": "https://gitee.com/passerby-b/javascript/raw/master/JD/passerby-b.boxjs.json",
       "script": "https://raw.githubusercontent.com/passerby-b/ks_fruit/main/ks_fruit.js"
     },
+    {
+      "id": "joy_run",
+      "name": "宠汪汪",
+      "keys": [
+        "LKYLToken"
+      ],
+      "descs_html": [
+        "填写LKYLToken"
+      ],
+      "settings": [
+        {
+          "id": "LKYLToken",
+          "name": "LKYLToken",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 1,
+          "desc": "LKYLToken"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/Orz-3/mini/master/jd.png",
+        "https://raw.githubusercontent.com/Orz-3/mini/master/jd.png"
+      ],
+      "author": "@小小",
+      "script": "jd_joy_run.js"
+    },    
+    
 {
             "id": "shuqi",
             "name": "书旗小说APP",
