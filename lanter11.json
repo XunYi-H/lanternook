@@ -149,6 +149,7 @@
           "type": "textarea",
           "autoGrow": false,
           "rows": 3,
+           "placeholder": "jdJoyRunToken",
           "desc": "LKYLToken"
         }
       ],
