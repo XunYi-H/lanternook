@@ -1,9 +1,8 @@
 {
-  "id": "ztxtop.script.sub",
-  "name": "中青合集自用",
+  "id": "zqyd",
+  "name": "中青阅读极速合集",
   "author": "@",
   "icon": "https://raw.githubusercontent.com/whymm/py/main/2bf7a6faff1648ac353a135f6d2356e.jpg",
-  "repo": "https://github.com/whymm",
   "apps": [{
       "id": "youthCk",
       "name": "中青数据",
@@ -214,7 +213,10 @@
     },
     {
       "author" : "@sunert",
-      "keys" : ["youth_start","youth_look"],
+      "keys" : [
+          "youth_start",
+          "youth_look"
+       ],
       "repo" : "https://github.com/Sunert/Scripts/blob/master/Task/youth_gain.js",
       "id" : "youthGain",
       "script" : "https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth_gain.js",
