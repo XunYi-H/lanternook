@@ -144,11 +144,11 @@
       "settings": [
         {
           "id": "LKYLToken",
-          "name": "LKYLToken",
-          "val": "jdJoyRunToken",
+          "name": "宠汪汪Token",
+          "val": "",
           "type": "textarea",
-          "autoGrow": true,
-          "rows": 1,
+          "autoGrow": false,
+          "rows": 3,
           "desc": "LKYLToken"
         }
       ],
@@ -156,7 +156,7 @@
         "https://raw.githubusercontent.com/Orz-3/mini/master/jd.png",
         "https://raw.githubusercontent.com/Orz-3/mini/master/jd.png"
       ],
-      "author": "@小小",
+      "author": "@",
       "script": "jd_joy_run.js"
     },    
     
