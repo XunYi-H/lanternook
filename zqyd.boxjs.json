@@ -216,7 +216,7 @@
       "author" : "@sunert",
       "keys" : [
         "youth_start",
-        "youth_look",
+        "youth_look"
       ],
       "repo" : "https://github.com/Sunert/Scripts/blob/master/Task/youth_gain.js",
       "id" : "youthGain",
