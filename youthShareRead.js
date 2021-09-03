@@ -10,6 +10,8 @@ https://gitee.com/curtinlv/qx/raw/master/rewrite/youth.conf, tag=中青 by Curti
 
 中青分享一篇文章到自己的微信上，自己点击一下即触发会自动完成10好有阅读奖励 500青豆/次。
 
+####青龙版###自己抓包，分享文章给自己，阅读后退出，搜索script.baertt.com/count2
+export WECHATURL=""
  */
 const $ = new Env("中青分享阅读-助力10次");
 
