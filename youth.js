@@ -5,6 +5,19 @@
 食用说明请查看本仓库目录Taskconf/youth/readme.md，其中打卡挑战赛可通过Boxjs开关，报名时间为23点，早起打卡时间为早5点，报名需1000青豆押金，打卡成功可返1000+青豆，打卡失败则押金不予返还，请注意时间运行，
 转发文章获得青豆不实，请无视
 
+#############
+#ck
+export YOUTH_HEADER=""
+#阅读时长
+export YOUTH_TIME=""
+#时间奖励
+export YOUTH_ARTBODY=""
+#浏览赚
+export YOUTH_START=""
+#看看赚
+export YOUTH_LOOK=""
+#阅读body
+export YOUTH_READ=""
 */
 
 const $ = new Env("中青看点");
