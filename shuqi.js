@@ -3,7 +3,6 @@ github地址 https://github.com/ziye888
 
 ###############################
 20210901 lanter&玻璃杯 修复任务列表错误,视频获取错误
-0903修复极速版视频任务错误，jsrwbody获取地址错误，修改spbody抓取判断条件
 ###############################
 
 ⚠️书旗小说     手机号账号数据共通， 部分任务可叠加，此脚本包含2个app的所有任务（无阅读挑战赛）共0.8-1元
@@ -1040,9 +1039,10 @@ function GetCookie() {
         }
     }
     //获取视频
-    //if ($request && $request.url.indexOf("prize") >= 0 && $request.url.indexOf("lottery") >= 0 && $request.body.indexOf("deliveryId=1175") >= 0) {
-	if ($request && $request.url.match(/\/api\/ad\/v1\/api\/prize\/lottery/)){
-        const shuqispbodyVal = $request.body;
+    //if ($request && $request.url.match(/\/api\/ad\/v1\/api\/prize\/lottery/) && $request.url.indexOf("prize") >= 0 && $request.url.indexOf("lottery") >= 0 && $request.body.indexOf("deliveryId=1175") >= 0) {
+	if ($request && $request.url.match(/\/api\/ad\/v1\/api\/prize\/lottery/)  && $request.body.indexOf("deliveryId=") >= 0 && $request.body.indexOf("platform=iOS")>=0) {
+	//if ($request && $request.url.match(/\/api\/ad\/v1\/api\/prize\/lottery/)){
+	    const shuqispbodyVal = $request.body;
         if (shuqispbodyVal) {
             if (XH == 1) {
                 cookie()
@@ -1185,8 +1185,8 @@ function GetCookie() {
         }
     }
     //获取任务
-    //if ($request && $request.url.indexOf("resource") >= 0 && $request.body.indexOf("resources") >= 0 && $request.body.indexOf("params=") >= 0 && $request.body.indexOf("appVer=4") >= 0 && $request.body.indexOf("skinVersionPrefix=") >= 0 && $request.body.indexOf("isNewUser=") < 0 && $request.body.indexOf("reqEncryptType=") < 0) {
-	if ($request && $request.url.match(/\/api\/render\/load\/resource/)){		
+    //if ($request && $request.url.indexOf("resource") >= 0 && $request.body.indexOf("platform=1") >= 0 && $request.body.indexOf("params=") >= 0 && $request.body.indexOf("appVer=4") >= 0 && $request.body.indexOf("skinVersionPrefix=") >= 0 ) {
+	if ($request && $request.url.match(/\/api\/render\/load\/resource/) && $request.body.indexOf("appVer=4") >= 0 ) {		
         const shuqirwbodyVal = $request.body;
         if (shuqirwbodyVal) {
             if (XH == 1) {
@@ -1403,7 +1403,8 @@ function GetCookie() {
     }
     //获取极速版视频
     //if ($request && $request.url.indexOf("prize") >= 0 && $request.url.indexOf("lottery") >= 0 && $request.body.indexOf("resourceId=719") >= 0) {
-	if ($request && $request.url.match(/\/api\/ad\/v1\/api\/prize\/lottery/)){
+	if ($request && $request.url.match(/\/api\/ad\/v1\/api\/prize\/lottery/)  && $request.body.indexOf("deliveryId=") >= 0 && $request.body.indexOf("platform=1")>=0) {
+	//if ($request && $request.url.match(/\/api\/ad\/v1\/api\/prize\/lottery/)){
         const shuqijsspbodyVal = $request.body;
         if (shuqijsspbodyVal) {
             if (XH == 1) {
@@ -1559,8 +1560,9 @@ function GetCookie() {
     }
     //获取极速版任务
     //if ($request && $request.url.indexOf("resource") >= 0 && $request.body.indexOf("resources") >= 0 && $request.body.indexOf("params=") >= 0 && $request.body.indexOf("appVer=1") >= 0 && $request.body.indexOf("skinVersionPrefix=") < 0 && $request.body.indexOf("isNewUser=") < 0 && $request.body.indexOf("reqEncryptType=") < 0) {
-	//if ($request && $request.url.indexOf("resource") >= 0 && $request.body.indexOf("platform=") >= 0 && $request.body.indexOf("params=") >= 0 && $request.body.indexOf("appVer=1") >= 0 && $request.body.indexOf("sqSv=1") >= 0 && $request.body.indexOf("session=") >=0) {
-	if ($request && $request.url.match(/\/api\/render\/load\/resource/)){
+	//&& $request.body.indexOf("params=") >= 0 && $request.body.indexOf("msv=10") >= 0 && $request.body.indexOf("udf=") < 0 && $request.body.indexOf("skinVersion=1") <0
+	if ($request && $request.url.match(/\/api\/render\/load\/resource/) && $request.body.indexOf("appVer=1") >= 0 ) {
+	//if ($request && $request.url.match(/\/api\/render\/load\/resource/)){
         const shuqijsrwbodyVal = $request.body;
         if (shuqijsrwbodyVal) {
             if (XH == 1) {
@@ -2751,7 +2753,7 @@ function jsshare(timeout = 0) {
     return new Promise((resolve) => {
         setTimeout(() => {
             let url = {
-                url: `https://ocean.shuqireader.com/api/activity/v1/task/${taskfx}`,
+                url: `https://ocean.shuqireader.com/api/activity/v1/task/reward`,
                 headers: {
                     'Content-Type': `application/x-www-form-urlencoded`,
                     'Host': `ocean.shuqireader.com`,
@@ -2760,7 +2762,8 @@ function jsshare(timeout = 0) {
             }
             $.post(url, async (err, resp, data) => {
                 try {
-                    if (logs) $.log(`${O}, 极速版每日分享🚩: ${decodeUnicode(data)}`);
+                    //if (logs) 
+					$.log(`${O}, 极速版每日分享🚩: ${decodeUnicode(data)}`);
                     $.jsshare = JSON.parse(data);
                     if ($.jsshare.status == 200) {
                         console.log(`极速版每日分享：成功\n`);
