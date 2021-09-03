@@ -6,7 +6,8 @@ Github Actions使用方法见[@lxk0301](https://raw.githubusercontent.com/lxk030
 
 多个请求体时用'&'号或者换行隔开" ‼️
 ######
-安卓版中青阅读
+安卓版中青阅读,抓包搜索：/v5/article/info/get.json，回车或者&分割
+export YOUTH_READ=""
 */
 
 const $ = new Env("中青看点阅读")
