@@ -13,8 +13,7 @@ export YOUTH_START=""
 export YOUTH_LOOK=""
 #阅读body
 export YOUTH_READ=""
-*/
-/*
+###############
 本脚本修改Sunert中青看点.再次感谢大佬
 赞赏:中青邀请码`53318330`,农妇山泉 -> 有点咸，万分感谢
 本脚本仅适用于中青看点极速版签加转盘领取青豆
