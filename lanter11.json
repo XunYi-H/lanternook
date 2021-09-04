@@ -4,75 +4,6 @@
   "author": "lanter11",
   "icon": "https://raw.githubusercontent.com/58xinian/icon/master/xmyd_mini.png",
   "apps": [
-              {
-            "id": "京东账号管理",
-            "name": "京东账号管理",
-            "keys": [
-              "CookieJD",
-              "CookieJD2",
-              "CookieJD3",
-              "CookieJD4",
-              "CookieJD5",
-              "CookieJD6",
-              "CookieJD7"
-            ],
-
-            "settings": [
-              {
-              "id": "CookieJD",
-              "name": "账号一",
-              "val": "",
-              "type": "text",
-              "desc": "账号一CookieJD"
-            },
-              {
-              "id": "CookieJD2",
-              "name": "账号二",
-              "val": "",
-              "type": "text",
-              "desc": "账号二 CookieJD2"
-            },
-               {
-              "id": "CookieJD3",
-              "name": "账号三",
-              "val": "",
-              "type": "text",
-              "desc": "账号三 CookieJD3"
-            },
-               {
-              "id": "CookieJD4",
-              "name": "账号四",
-              "val": "",
-              "type": "text",
-              "desc": "账号四 CookieJD4"
-            },
-               {
-              "id": "CookieJD5",
-              "name": "账号五",
-              "val": "",
-              "type": "text",
-              "desc": "账号五 CookieJD5"
-            },
-               {
-              "id": "CookieJD6",
-              "name": "账号六",
-              "val": "",
-              "type": "text",
-              "desc": "账号六 CookieJD6"
-            },
-               {
-              "id": "CookieJD7",
-              "name": "账号七",
-              "val": "",
-              "type": "text",
-              "desc": "账号七 CookieJD7"
-            }
-            ],
-
-            "author": "@Curtin",
-            "repo": "https://gitee.com/curtinlv/qx",
-            "icons": ["https://gitee.com/curtinlv/img/raw/master/jd.png", "https://gitee.com/curtinlv/img/raw/master/jd.png"]
-       },
       {
       "id": "JD_Cookies",
       "name": "京东签到",
@@ -228,7 +159,77 @@
       ],
       "author": "@lanter",
       "script": "joy_getToken.js"
-    },    
+    },
+    
+                  {
+            "id": "京东账号管理",
+            "name": "京东账号管理",
+            "keys": [
+              "CookieJD",
+              "CookieJD2",
+              "CookieJD3",
+              "CookieJD4",
+              "CookieJD5",
+              "CookieJD6",
+              "CookieJD7"
+            ],
+
+            "settings": [
+              {
+              "id": "CookieJD",
+              "name": "账号一",
+              "val": "",
+              "type": "text",
+              "desc": "账号一CookieJD"
+            },
+              {
+              "id": "CookieJD2",
+              "name": "账号二",
+              "val": "",
+              "type": "text",
+              "desc": "账号二 CookieJD2"
+            },
+               {
+              "id": "CookieJD3",
+              "name": "账号三",
+              "val": "",
+              "type": "text",
+              "desc": "账号三 CookieJD3"
+            },
+               {
+              "id": "CookieJD4",
+              "name": "账号四",
+              "val": "",
+              "type": "text",
+              "desc": "账号四 CookieJD4"
+            },
+               {
+              "id": "CookieJD5",
+              "name": "账号五",
+              "val": "",
+              "type": "text",
+              "desc": "账号五 CookieJD5"
+            },
+               {
+              "id": "CookieJD6",
+              "name": "账号六",
+              "val": "",
+              "type": "text",
+              "desc": "账号六 CookieJD6"
+            },
+               {
+              "id": "CookieJD7",
+              "name": "账号七",
+              "val": "",
+              "type": "text",
+              "desc": "账号七 CookieJD7"
+            }
+            ],
+
+            "author": "@Curtin",
+            "repo": "https://gitee.com/curtinlv/qx",
+            "icons": ["https://gitee.com/curtinlv/img/raw/master/jd.png", "https://gitee.com/curtinlv/img/raw/master/jd.png"]
+       },
                {
           "id": "Youth_AutoRead",
           "name": "中青看点",
