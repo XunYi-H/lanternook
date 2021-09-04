@@ -32,10 +32,10 @@ async function getShareInfo() {
       console.log("s_si:" + s_si);
       $.msg("中青分享", "", "数据获取成功");
       for(let i=1;i<11;i++){
-		  //await $.wait(8000+Math.floor(5000 * Math.random()));
+	//await $.wait(8000+Math.floor(5000 * Math.random()));
         DD = RT(2000, 10000)
         console.log(`随机延迟${DD/1000}秒`)
-		    await $.wait(DD)
+	await $.wait(DD)
         await postShareInfoa(url,s_si, i)
       }
 
