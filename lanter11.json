@@ -284,8 +284,8 @@
           "name" : "通知频率 (点击查看设置说明)",
           "type" : "number",
           "desc" : "设定通知频率，前三次为全部通知，之后转盘次数/设定频率整除时通知，如设置0为无通知，设置1为全部通知，设置其他数可整除余0时通知，默认值50"
-        },
-         
+        }
+         ],
           "author": "@CenBoMin",
           "repo": "https://github.com/CenBoMin/QuantumultX/blob/master/Scripts/Youth",
           "script": "https://gitee.com/curtinlv/qx/raw/master/Script/Youth_AutoRead.js",
