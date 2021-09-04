@@ -15,22 +15,6 @@ QX 1.0. 7+ :
 
 [rewrite_remote]
 https://gitee.com/curtinlv/qx/raw/master/Youth_GetCookie.conf, tag=中青GetCookie, update-interval=86400, opt-parser=false, enabled=true
-
-青龙使用方法
-#############
-#ck
-export YOUTH_HEADER=""
-#阅读时长
-export YOUTH_TIME=""
-#时间奖励
-export YOUTH_ARTBODY=""
-#浏览赚
-export YOUTH_START=""
-#看看赚
-export YOUTH_LOOK=""
-#阅读body
-export YOUTH_READ=""
-###############
 */
 
 let s = 200 //各数据接口延迟
