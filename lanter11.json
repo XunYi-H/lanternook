@@ -244,7 +244,7 @@
     {
       "author" : "@sunert",
       "descs_html": [
-        "中青浏览赚YOUTH_START、看看赚YOUTH_LOOK"
+        "中青浏览赚YOUTH_START看看赚YOUTH_LOOK"
       ],
       "keys" : [
           "youth_start",
@@ -253,7 +253,7 @@
       "repo" : "https://github.com/Sunert/Scripts/blob/master/Task/youth_gain.js",
       "id" : "youthGain",
       "script" : "https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth_gain.js",
-      "name" : "中青浏览赚、看看赚",
+      "name" : "中青浏览赚看看赚",
       "icons" : [
         "https://raw.githubusercontent.com/Orz-3/mini/master/youth.png",
         "https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png"
@@ -262,7 +262,7 @@
     {
       "author" : "@sunert",
       "descs_html": [
-        "中青阅读请求YOUTH_READ和阅读时长 YOUTH_TIME"
+        "中青阅读请求YOUTH_READ阅读时长YOUTH_TIME"
       ],
       "keys" : [
         "youth_autoread",
