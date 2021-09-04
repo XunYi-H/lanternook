@@ -161,75 +161,6 @@
       "script": "joy_getToken.js"
     },
     
-                  {
-            "id": "京东账号管理",
-            "name": "京东账号管理",
-            "keys": [
-              "CookieJD",
-              "CookieJD2",
-              "CookieJD3",
-              "CookieJD4",
-              "CookieJD5",
-              "CookieJD6",
-              "CookieJD7"
-            ],
-
-            "settings": [
-              {
-              "id": "CookieJD",
-              "name": "账号一",
-              "val": "",
-              "type": "text",
-              "desc": "账号一CookieJD"
-            },
-              {
-              "id": "CookieJD2",
-              "name": "账号二",
-              "val": "",
-              "type": "text",
-              "desc": "账号二 CookieJD2"
-            },
-               {
-              "id": "CookieJD3",
-              "name": "账号三",
-              "val": "",
-              "type": "text",
-              "desc": "账号三 CookieJD3"
-            },
-               {
-              "id": "CookieJD4",
-              "name": "账号四",
-              "val": "",
-              "type": "text",
-              "desc": "账号四 CookieJD4"
-            },
-               {
-              "id": "CookieJD5",
-              "name": "账号五",
-              "val": "",
-              "type": "text",
-              "desc": "账号五 CookieJD5"
-            },
-               {
-              "id": "CookieJD6",
-              "name": "账号六",
-              "val": "",
-              "type": "text",
-              "desc": "账号六 CookieJD6"
-            },
-               {
-              "id": "CookieJD7",
-              "name": "账号七",
-              "val": "",
-              "type": "text",
-              "desc": "账号七 CookieJD7"
-            }
-            ],
-
-            "author": "@Curtin",
-            "repo": "https://gitee.com/curtinlv/qx",
-            "icons": ["https://gitee.com/curtinlv/img/raw/master/jd.png", "https://gitee.com/curtinlv/img/raw/master/jd.png"]
-       },
     {
       "id": "Youth",
       "name": "中青看点",      
@@ -244,6 +175,7 @@
         "youthheader_zq",
         "read_zq",
         "readtime_zq",
+        "red_zq",
         "cashurl_zq",
         "cashbody_zq",
         "zqcash",
@@ -283,7 +215,7 @@
         },
         {
           "id" : "zqcash",
-          "val" : "30",
+          "val" : "10",
           "name" : "提现金额",
           "type" : "radios",
           "desc" : "自动提现金额需和获取提现请求保持一致",
@@ -311,6 +243,9 @@
     },
     {
       "author" : "@sunert",
+      "descs_html": [
+        "中青浏览赚YOUTH_START、看看赚YOUTH_LOOK"
+      ],
       "keys" : [
           "youth_start",
           "youth_look"
@@ -318,7 +253,7 @@
       "repo" : "https://github.com/Sunert/Scripts/blob/master/Task/youth_gain.js",
       "id" : "youthGain",
       "script" : "https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth_gain.js",
-      "name" : "中青浏览-看看赚",
+      "name" : "中青浏览赚、看看赚",
       "icons" : [
         "https://raw.githubusercontent.com/Orz-3/mini/master/youth.png",
         "https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png"
@@ -326,6 +261,9 @@
     },
     {
       "author" : "@sunert",
+      "descs_html": [
+        "中青阅读请求YOUTH_READ和阅读时长 YOUTH_TIME"
+      ],
       "keys" : [
         "youth_autoread",
         "autotime_zq"
