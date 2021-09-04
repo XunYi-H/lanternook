@@ -3,7 +3,24 @@ github地址 https://github.com/ziye888
 
 ###############################
 20210901 lanter&玻璃杯 修复任务列表错误,视频获取错误
-0903 修复极速版任务列表错误，修改视频body和任务body ck抓取错误
+0903 修复极速版任务列表错误，修改视频body和任务body ck抓取错误,rwbody需要重新抓，地址改了
+参考版本：ios书旗4.39,极速版1.05
+
+#书旗小说获取header
+#用户名  视频任务 抽奖页面 极速版签到视频页   极速版视频任务
+#https:\/\/ocean\.shuqireader\.com\/* - script-request-header https://raw.githubusercontent.com/lanternook/lanternook/main/shuqi.js
+#极速版书城
+#http:\/\/activity-center-web\.shuqireader\.com\/* - script-request-header https://raw.githubusercontent.com/lanternook/lanternook/main/shuqi.js
+
+
+#书旗小说获取body
+#阅读 签到  分享 奖励 收取奖励  抽奖次数 抽奖 极速版视频 极速版签到视频 极速版阅读 极速版签到 极速版分享 极速版书城
+#https:\/\/ocean\.shuqireader\.com\/* - script-request-body https://raw.githubusercontent.com/lanternook/lanternook/main/shuqi.js
+#收益 任务 极速版任务
+#https:\/\/render\.shuqireader\.com\/* - script-request-body https://raw.githubusercontent.com/lanternook/lanternook/main/shuqi.js
+#时长
+#https:\/\/jcollection\.shuqireader\.com\/* - script-request-body https://raw.githubusercontent.com/lanternook/lanternook/main/shuqi.js
+
 ###############################
 
 ⚠️书旗小说     手机号账号数据共通， 部分任务可叠加，此脚本包含2个app的所有任务（无阅读挑战赛）共0.8-1元
