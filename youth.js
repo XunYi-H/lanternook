@@ -1,19 +1,4 @@
 /*
-青龙使用方法
-#############
-#ck
-export YOUTH_HEADER=""
-#阅读时长
-export YOUTH_TIME=""
-#时间奖励
-export YOUTH_ARTBODY=""
-#浏览赚
-export YOUTH_START=""
-#看看赚
-export YOUTH_LOOK=""
-#阅读body
-export YOUTH_READ=""
-###############
 本脚本修改Sunert中青看点.再次感谢大佬
 赞赏:中青邀请码`53318330`,农妇山泉 -> 有点咸，万分感谢
 本脚本仅适用于中青看点极速版签加转盘领取青豆
@@ -30,6 +15,22 @@ QX 1.0. 7+ :
 
 [rewrite_remote]
 https://gitee.com/curtinlv/qx/raw/master/Youth_GetCookie.conf, tag=中青GetCookie, update-interval=86400, opt-parser=false, enabled=true
+
+青龙使用方法
+#############
+#ck
+export YOUTH_HEADER=""
+#阅读时长
+export YOUTH_TIME=""
+#时间奖励
+export YOUTH_ARTBODY=""
+#浏览赚
+export YOUTH_START=""
+#看看赚
+export YOUTH_LOOK=""
+#阅读body
+export YOUTH_READ=""
+###############
 */
 
 let s = 200 //各数据接口延迟
