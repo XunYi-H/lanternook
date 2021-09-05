@@ -35,8 +35,9 @@ async function getShareInfo() {
 	//await $.wait(8000+Math.floor(5000 * Math.random()));
         DD = RT(2000, 10000)
         console.log(`随机延迟${DD/1000}秒`)
+	$.msg(`【随机延迟${DD/1000}秒】\n`, "", "");
 	await $.wait(DD)
-        await postShareInfoa(url,s_si, i)
+        //await postShareInfoa(url,s_si, i)
       }
 
       } else {
