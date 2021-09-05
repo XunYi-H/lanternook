@@ -16,7 +16,7 @@ $.idx = ($.idx = ($.getval('zqSuffix') || '1') - 1) > 0 ? ($.idx + 1 + '') : '';
 //自定义分享次数
 let min = $.getdata('zqsharemin') || 1; //分享最少次数
 let max = $.getdata('zqsharemax') || 3; //分享最多次数
-//随机生成分享次数
+//随机生成分享次数 
 let rand = Math.floor(Math.random()*(max-min+1))+min;
 
 if ($request) getShareInfo();
