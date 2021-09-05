@@ -268,8 +268,8 @@
           "name" : "最多次数",
           "type" : "number",
           "desc" : "定义最多分享次数"
-        },
-       ]
+        }
+       ],
       "script" : "https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youthShareRead.js",
       "repo" : "https://github.com/Sunert/Scripts/blob/master/Task/youthShareRead.js",
       "icons" : [
