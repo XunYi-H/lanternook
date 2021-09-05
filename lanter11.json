@@ -171,7 +171,7 @@
       "<p>其中zq_nick、zqcash和zqcard为昵称、提现金额和早起打卡开关，无需另外获取，相关项设置后自动生成，cashurl_zq和cashbody_zq为提现请求，获取后方可自动提现，可选</p>"
     ],
       "keys" : [
-        "zq_nick",  
+        "zq_nick",
         "youthheader_zq",
         "read_zq",
         "readtime_zq",
