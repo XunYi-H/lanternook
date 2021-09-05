@@ -31,7 +31,7 @@ async function getShareInfo() {
       console.log("url:" + url);
       console.log("s_si:" + s_si);
       $.msg("中青分享\n", "", `数据获取成功\n本次分享${rand}次`);
-      for(let i=1;i<$rand;i++){
+      for(let i=1;i<rand;i++){
 	//await $.wait(8000+Math.floor(5000 * Math.random()));
         DD = 8000+Math.floor(5000 * Math.random());
         console.log(`随机延迟${DD/1000}秒`);
