@@ -36,7 +36,8 @@ async function getShareInfo() {
         DD = 8000+Math.floor(5000 * Math.random());
         console.log(`随机延迟${DD/1000}秒`);
 	//$.msg("【随机延迟】\n", "", `${DD/1000}秒`);
-	await $.wait(DD);		
+	await $.wait(DD);
+	//开始分享
         await postShareInfoa(url,s_si, i)
       }
 	  
