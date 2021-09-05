@@ -12,6 +12,13 @@ https://gitee.com/curtinlv/qx/raw/master/rewrite/youth.conf, tag=中青 by Curti
 
  */
 const $ = new Env("中青分享阅读-助力10次");
+$.idx = ($.idx = ($.getval('zqSuffix') || '1') - 1) > 0 ? ($.idx + 1 + '') : ''; // 账号扩展字符
+//自定义分享次数
+let min = $.getdata('zqsharemin') || 1; //分享最少次数
+let max = $.getdata('zqsharemax') || 3; //分享最多次数
+//随机生成分享次数
+let rand = Math.floor(Math.random()*(max-min+1))+min;
+
 if ($request) getShareInfo();
 
 //分享数据获取
@@ -20,16 +27,17 @@ async function getShareInfo() {
     if ($request.headers && $request.url.indexOf("script.baertt.com/count2") > -1) {
       var url = $request.url;
       var s_si = url.match(/si=(.*?)&/)[1];
+      if (url) $.setdata(url,'shareurl_zq'+ $.idx);
       console.log("url:" + url);
       console.log("s_si:" + s_si);
-      $.msg("中青分享", "", "数据获取成功");
-      for(let i=1;i<10;i++){
+      $.msg("中青分享\n", "", `数据获取成功\n本次分享${rand}次`);
+      for(let i=1;i<$rand;i++){
 	//await $.wait(8000+Math.floor(5000 * Math.random()));
         DD = 8000+Math.floor(5000 * Math.random());
         console.log(`随机延迟${DD/1000}秒`);
 	//$.msg("【随机延迟】\n", "", `${DD/1000}秒`);
 	await $.wait(DD);		
-        await postShareInfoa(url,s_si, i)
+        //await postShareInfoa(url,s_si, i)
       }
 	  
 
