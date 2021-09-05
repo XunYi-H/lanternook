@@ -30,7 +30,7 @@ async function getShareInfo() {
       	if (url) $.setdata(url,'shareurl_zq'+ $.idx);
       	console.log("url:" + url);
       	console.log("s_si:" + s_si);
-      	$.msg("中青分享\n", "", `数据获取成功\n还剩${sharemax}次`);
+      	$.msg("中青分享\n", "", `数据获取成功\n本次助力${sharemax}次`);
       	for(let i=1;i<sharemax;i++){
 		//await $.wait(8000+Math.floor(5000 * Math.random()));
         	DD = 8000+Math.floor(5000 * Math.random());
@@ -41,7 +41,7 @@ async function getShareInfo() {
         	await postShareInfoa(url,s_si, i)
       	}
 	  
-	$.msg("中青分享\n", "", `数据分享${sharemax}次完成`);
+	$.msg("中青分享\n", "", `分享助力${sharemax}次完成`);
 	$.done();
       } else {
         $.notify("中青分享", "", "️url获取失败");
