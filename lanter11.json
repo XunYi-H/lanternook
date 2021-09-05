@@ -221,7 +221,6 @@
       "name": "中青分享",
       "keys": [
         "shareurl_zq",
-        "zqsharemin",
         "zqsharemax"
       ],
       "settings": [
@@ -233,18 +232,11 @@
           "desc": "中青分享时获取的链接"
         },
         {
-          "id" : "zqsharemin",
-          "val" : "8",
-          "name" : "最少次数",
-          "type" : "text",
-          "desc" : "定义最少分享次数"
-        },
-        {
           "id" : "zqsharemax",
-          "val" : "12",
-          "name" : "最多次数",
+          "val" : "10",
+          "name" : "分享次数",
           "type" : "text",
-          "desc" : "定义最多分享次数"
+          "desc" : "定义分享次数"
         }
       ],
       "author": "@sunert",
