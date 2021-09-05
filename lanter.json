@@ -133,7 +133,46 @@
       "author": "@passerby-b",
       "repo": "https://gitee.com/passerby-b/javascript/raw/master/JD/passerby-b.boxjs.json",
       "script": "https://raw.githubusercontent.com/passerby-b/ks_fruit/main/ks_fruit.js"
-    }    
+    },
+    {
+      "id": "youthShareRead",
+      "name": "中青分享",
+      "keys": [
+        "shareurl_zq",
+        "zqsharemin",
+        "zqsharemax"
+      ],
+      "settings": [
+        {
+          "id": "shareurl_zq",
+          "name": "中青分享链接",
+          "val": "",
+          "type": "text",
+          "desc": "中青分享时获取的链接"
+        },
+        {
+          "id" : "zqsharemin",
+          "val" : "1",
+          "name" : "最少次数",
+          "type" : "text",
+          "desc" : "定义最少分享次数"
+        },
+        {
+          "id" : "zqsharemax",
+          "val" : "3",
+          "name" : "最多次数",
+          "type" : "text",
+          "desc" : "定义最多分享次数"
+        }
+      ],
+      "author": "@sunert",
+      "repo": "https://github.com/Sunert/Scripts/blob/master/Task/youthShareRead.js",
+      "script": "https://github.com/Sunert/Scripts/blob/master/Task/youthShareRead.js",
+      "icons": [
+        "https://raw.githubusercontent.com/Orz-3/mini/master/youth.png",
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png"
+      ]
+    }
 
   ]
 }
