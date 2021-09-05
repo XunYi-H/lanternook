@@ -11,11 +11,11 @@ https://gitee.com/curtinlv/qx/raw/master/rewrite/youth.conf, tag=中青 by Curti
 中青分享一篇文章到自己的微信上，自己点击一下即触发会自动完成10好有阅读奖励 500青豆/次。
 
  */
-const $ = new Env("中青分享阅读-助力10次");
+const $ = new Env("中青分享阅读-助力");
 $.idx = ($.idx = ($.getval('zqSuffix') || '1') - 1) > 0 ? ($.idx + 1 + '') : ''; // 账号扩展字符
 //自定义分享次数
 //let min = $.getdata('zqsharemin') || 1; //分享最少次数
-let sharemax = $.getdata('zqsharemax') || 3; //分享最多次数
+let sharemax = $.getdata('zqsharemax') || 8; //分享最多次数
 //随机生成分享次数 
 //let rand = Math.floor(Math.random()*(max-min+1))+min;
 
@@ -30,7 +30,7 @@ async function getShareInfo() {
       	if (url) $.setdata(url,'shareurl_zq'+ $.idx);
       	console.log("url:" + url);
       	console.log("s_si:" + s_si);
-      	$.msg("中青分享\n", "", `数据获取成功\n还剩${sharemax}次.`);
+      	$.msg("中青分享\n", "", `数据获取成功\n还剩${sharemax}次`);
       	for(let i=1;i<sharemax;i++){
 		//await $.wait(8000+Math.floor(5000 * Math.random()));
         	DD = 8000+Math.floor(5000 * Math.random());
@@ -38,10 +38,10 @@ async function getShareInfo() {
 		//$.msg("【随机延迟】\n", "", `${DD/1000}秒`);
 		await $.wait(DD);
 		//开始分享
-        	//await postShareInfoa(url,s_si, i)
+        	await postShareInfoa(url,s_si, i)
       	}
 	  
-	$.msg("中青分享\n", "", `数据分享${sharemax}次完成.`);
+	$.msg("中青分享\n", "", `数据分享${sharemax}次完成`);
 	$.done();
       } else {
         $.notify("中青分享", "", "️url获取失败");
