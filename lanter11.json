@@ -105,34 +105,6 @@
       "script": "https://raw.githubusercontent.com/passerby-b/didi_fruit/main/dd_fruit.js"
     },
     {
-      "id": "ks_fruit",
-      "name": "快手果园",
-      "keys": [
-        "kscookies"
-      ],
-      "descs_html": [
-        "填写cookie,多账号用英文逗号(,)分开"
-      ],
-      "settings": [
-        {
-          "id": "kscookies",
-          "name": "kscookies",
-          "val": "",
-          "type": "textarea",
-          "autoGrow": true,
-          "rows": 8,
-          "desc": "kscookies"
-        }
-      ],
-      "icons": [
-        "https://gitee.com/passerby-b/javascript/raw/master/icon/ks.png",
-        "https://gitee.com/passerby-b/javascript/raw/master/icon/ks.png"
-      ],
-      "author": "@passerby-b",
-      "repo": "https://gitee.com/passerby-b/javascript/raw/master/JD/passerby-b.boxjs.json",
-      "script": "https://raw.githubusercontent.com/passerby-b/ks_fruit/main/ks_fruit.js"
-    },
-    {
       "id": "joy_run",
       "name": "宠汪汪Token",      
       "keys": [
@@ -243,7 +215,45 @@
         "https://raw.githubusercontent.com/Orz-3/mini/master/youth.png",
         "https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png"
       ]
+    },
+   {
+      "id": "youthShareRead",
+      "name": "中青分享",
+      "keys": [
+        "shareurl_zq",
+        "zqsharemin",
+        "zqsharemax"
+      ],
+      "settings": [
+        {
+          "id": "shareurl_zq",
+          "name": "中青分享链接",
+          "val": "",
+          "type": "text",
+          "desc": "中青分享时获取的链接"
+        },
+        {
+          "id" : "zqsharemin",
+          "val" : "8",
+          "name" : "最少次数",
+          "type" : "text",
+          "desc" : "定义最少分享次数"
+        },
+        {
+          "id" : "zqsharemax",
+          "val" : "12",
+          "name" : "最多次数",
+          "type" : "text",
+          "desc" : "定义最多分享次数"
+        }
+      ],
+      "author": "@sunert",
+      "repo": "https://github.com/Sunert/Scripts/blob/master/Task/youthShareRead.js",
+      "script": "https://github.com/Sunert/Scripts/blob/master/Task/youthShareRead.js",
+      "icons": [
+        "https://raw.githubusercontent.com/Orz-3/mini/master/youth.png",
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png"
+      ]
     }
-
   ]
 }
