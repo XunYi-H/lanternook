@@ -243,42 +243,7 @@
         "https://raw.githubusercontent.com/Orz-3/mini/master/youth.png",
         "https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png"
       ]
-    },
-
-    {
-      "author" : "@sunert",
-      "descs_html": [
-        "中青阅读，火爆分享，分享一篇文章到自己的微信上，自己点击一下即触发会自动完成随机次数阅读奖励"
-      ],
-      "keys" : [
-        "shareurl_zq",
-      ],
-      "settings" : [
-        {
-          "id" : "zqsharemin",
-          "val" : "1",
-          "name" : "最少次数",
-          "type" : "number",
-          "desc" : "定义最少分享次数"
-        },
-        {
-          "id" : "zqsharemax",
-          "val" : "3",
-          "name" : "最多次数",
-          "type" : "number",
-          "desc" : "定义最多分享次数"
-        },
-       ]
-      "repo" : "https://github.com/Sunert/Scripts/blob/master/Task/youthShareRead.js",
-      "id" : "youthShareRead",
-      "script" : "https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youthShareRead.js",
-      "name" : "中青分享",
-      "icons" : [
-        "https://raw.githubusercontent.com/Orz-3/mini/master/youth.png",
-        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png"
-      ]
     }
-
 
   ]
 }
