@@ -221,8 +221,8 @@
       "name": "中青分享",
       "keys": [
         "shareurl_zq",
-        "zqsharein",
-        "zqsharemax",
+        "zqsharemin",
+        "zqsharemax"
       ],
       "settings": [
         {
