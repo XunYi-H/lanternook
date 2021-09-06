@@ -23,7 +23,7 @@ async function getShareInfo() {
       console.log("url:" + url);
       console.log("s_si:" + s_si);
       $.msg("中青分享", "", "数据获取成功");
-      for(let i=1;i<4;i++){
+      for(let i=1;i<11;i++){
          	DD = 8000+Math.floor(5000 * Math.random());
         	console.log(`随机延迟${DD/1000}秒`);
 		//$.msg("【随机延迟】\n", "", `${DD/1000}秒`);
