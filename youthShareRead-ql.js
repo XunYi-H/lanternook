@@ -10,10 +10,15 @@ https://gitee.com/curtinlv/qx/raw/master/rewrite/youth.conf, tag=中青 by Curti
 
 中青分享一篇文章到自己的微信上，自己点击一下即触发会自动完成10好有阅读奖励 500青豆/次。
 
-####青龙版###自己抓包，分享文章给自己，阅读后退出，搜索script.baertt.com/count2
-export WECHATURL=""
  */
 const $ = new Env("中青分享阅读-助力10次");
+//延时随机时间
+let min=18000;
+let max=45000;
+//分享次数
+let smin=8;
+let smax=13;
+let srand = Math.floor(Math.random()*(smax-smin+1))+smin;
 
 //let request = ""
 let $url = process.env.WECHATURL
@@ -33,17 +38,27 @@ async function getShareInfo() {
       var s_si = url.match(/si=(.*?)&/)[1];
       console.log("url:" + url);
       console.log("s_si:" + s_si);
-      $.msg("中青分享", "", "数据获取成功");
-      for(let i=1;i<11;i++){
-		  await $.wait(8000+Math.floor(5000 * Math.random()));
-        await postShareInfoa(url,s_si, i)
+	  let tmp=srand-1;
+      $.msg("中青分享", "", `助力数据获取成功\n本次助力${tmp}次`);
+      for(let i=1;i<srand;i++){
+			let rand = Math.floor(Math.random()*(max-min+1))+min;
+		
+         	//DD = 18000+Math.floor(15000 * Math.random());
+			DD = 28000+rand;
+        	console.log(`随机延迟${DD/1000}秒`);
+			//$.msg("【随机延迟】\n", "", `${DD/1000}秒`);
+			await $.wait(DD);
+			//开始分享
+			console.log(`分享第${i}次\n`);
+			await postShareInfoa(url,s_si, i)
       }
 
       } else {
-        $.notify("中青分享", "", "️据获取失败");
+         $.notify("中青分享", "", "️url获取失败");
       }
     } catch (eor) {
-    $.msg("中青数据获取失败", "", "️中青数据获取失败");
+		console.log("err" + eor);
+		$.msg("中青数据分享失败", "", "️");
   }
 
   $.done();
