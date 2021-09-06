@@ -14,8 +14,8 @@ https://gitee.com/curtinlv/qx/raw/master/rewrite/youth.conf, tag=中青 by Curti
  */
 const $ = new Env("中青分享阅读-助力10次");
 $.idx = ($.idx = ($.getval('zqSuffix') || '1') - 1) > 0 ? ($.idx + 1 + '') : ''; // 账号扩展字符
-let min = $.getdata('zqsharemin') || 2; //分享最少次数
-let max = $.getdata('zqsharemax') || 4; //分享最多次数
+let min = $.getdata('zqsharemin') || 6; //分享最少次数
+let max = $.getdata('zqsharemax') || 13; //分享最多次数
 //随机生成分享次数 
 let rand = Math.floor(Math.random()*(max-min+1))+min;
 
@@ -34,13 +34,13 @@ async function getShareInfo() {
       $.msg("中青分享", "", `助力数据获取成功\n请马上关闭微信文章页面\n本次助力${tmp}次`);	  
       //$.msg("中青分享", "", "数据获取成功");
       for(let i=1;i<rand;i++){
-         	DD = 3000+Math.floor(5000 * Math.random());
+         	DD = 8000+Math.floor(6000 * Math.random());
         	console.log(`随机延迟${DD/1000}秒`);
 		//$.msg("【随机延迟】\n", "", `${DD/1000}秒`);
 		await $.wait(DD);
 		console.log(`分享第${i}次\n`);		
 		//开始分享
-		//await postShareInfoa(url,s_si, i)
+		await postShareInfoa(url,s_si, i)
       }
 
       } else {
