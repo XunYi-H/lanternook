@@ -216,7 +216,7 @@
         "https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png"
       ]
     },
-   {
+    {
       "id": "youthShareRead",
       "name": "中青分享",
       "keys": [
@@ -234,17 +234,17 @@
         },
         {
           "id" : "zqsharemin",
-          "val" : "6",
-          "name" : "助力最少次数",
+          "val" : "1",
+          "name" : "最少次数",
           "type" : "text",
-          "desc" : "定义助力最少次数"
-        },        
+          "desc" : "定义最少分享次数"
+        },
         {
           "id" : "zqsharemax",
-          "val" : "12",
-          "name" : "助力最多次数",
+          "val" : "3",
+          "name" : "最多次数",
           "type" : "text",
-          "desc" : "定义助力最多次数"
+          "desc" : "定义最多分享次数"
         }
       ],
       "author": "@sunert",
@@ -255,5 +255,6 @@
         "https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png"
       ]
     }
+
   ]
 }
