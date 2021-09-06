@@ -29,7 +29,7 @@ async function getShareInfo() {
 		//$.msg("【随机延迟】\n", "", `${DD/1000}秒`);
 		await $.wait(DD);
 		//开始分享
-		//await postShareInfoa(url,s_si, i)
+		await postShareInfoa(url,s_si, i)
       }
 
       } else {
