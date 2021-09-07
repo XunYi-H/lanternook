@@ -14,11 +14,11 @@ https://gitee.com/curtinlv/qx/raw/master/rewrite/youth.conf, tag=中青 by Curti
  */
 const $ = new Env("中青分享阅读-助力10次");
 $.idx = ($.idx = ($.getval('zqSuffix') || '1') - 1) > 0 ? ($.idx + 1 + '') : ''; // 账号扩展字符
-let min = $.getdata('zqsharemin') || 6; //分享最少次数
-let max = $.getdata('zqsharemax') || 13; //分享最多次数
+var min = $.getdata('zqsharemin') || 6; //分享最少次数
+var max = $.getdata('zqsharemax') || 13; //分享最多次数
 //随机生成分享次数 
-let rand = Math.floor(Math.random()*(max-min+1))+min;
-
+var rand = Math.floor(Math.random()*(max-min+1))+min;
+if (rand>12) rand=12;
 if ($request) getShareInfo();
 
 //分享数据获取
