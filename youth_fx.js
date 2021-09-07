@@ -38,7 +38,7 @@ isRequest ? getUrl() : main();
 //if (!request) getShareInfo();
 
 
-//分享数据获取
+//分享数据url获取
 async function getUrl() {
     if ($request.headers && $request.url.indexOf("script.baertt.com/count2") > -1) {
       var url = $request.url;
@@ -55,7 +55,7 @@ async function getUrl() {
  $.done();
   
 }
-//分享数据获取
+//分享数据cron运行
 async function main() {
 	if (zqurl.indexOf("script.baertt.com/count2") > -1) {
 		//var url = zqurl;
