@@ -236,14 +236,14 @@
           "id" : "zqsharemin",
           "val" : "6",
           "name" : "最少次数",
-          "type" : "text",
+          "type" : "number",
           "desc" : "定义最少分享次数"
         },
         {
           "id" : "zqsharemax",
           "val" : "13",
           "name" : "最多次数",
-          "type" : "text",
+          "type" : "number",
           "desc" : "定义最多分享次数"
         }
       ],
