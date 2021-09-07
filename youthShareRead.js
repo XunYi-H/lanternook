@@ -16,9 +16,13 @@ const $ = new Env("中青分享阅读-助力10次");
 $.idx = ($.idx = ($.getval('zqSuffix') || '1') - 1) > 0 ? ($.idx + 1 + '') : ''; // 账号扩展字符
 var min = $.getdata('zqsharemin') || 6; //分享最少次数
 var max = $.getdata('zqsharemax') || 13; //分享最多次数
+//转换为数字型整数
+min=parseInt(min);
+max=parseInt(max);
+
 //随机生成分享次数 
 var rand = Math.floor(Math.random()*(max-min+1))+min;
-if (rand>12) rand=12;
+if (rand>13) rand=13;
 if ($request) getShareInfo();
 
 //分享数据获取
