@@ -77,11 +77,11 @@ async function main() {
 			await $.wait(DD);
 			console.log(`分享第${i}次\n`);		
 			//开始分享
-			//await postShareInfoa(zqurl,s_si, i)
+			await postShareInfoa(zqurl,s_si, i)
 		}
 
 	} else {
-        $.notify("中青分享", "", "️url获取失败");
+        $.notify("中青分享", "", "️url错误，请重新抓取");
 	}
   $.done();
 }
