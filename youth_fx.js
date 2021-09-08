@@ -11,6 +11,11 @@ https://gitee.com/curtinlv/qx/raw/master/rewrite/youth.conf, tag=中青 by Curti
 中青分享一篇文章到自己的微信上，自己点击一下即触发会自动完成10好有阅读奖励 500青豆/次。
 ###
 增加随机次数
+date 20210908
+lanter11
+获取和运行分开，先获取url,然后设置cron运行。url可更新可不更新
+boxjs订阅lanter11.json
+cron一天运行一次
  */
 const $ = new Env("中青分享阅读-助力10次");
 $.idx = ($.idx = ($.getval('zqSuffix') || '1') - 1) > 0 ? ($.idx + 1 + '') : ''; // 账号扩展字符
