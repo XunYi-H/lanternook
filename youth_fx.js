@@ -10,64 +10,84 @@ https://gitee.com/curtinlv/qx/raw/master/rewrite/youth.conf, tag=中青 by Curti
 
 中青分享一篇文章到自己的微信上，自己点击一下即触发会自动完成10好有阅读奖励 500青豆/次。
 ###
-date:20210907 
-lanter11 modify
 增加随机次数
-修改为，重写获取url,设置cron自动执行
  */
 const $ = new Env("中青分享阅读-助力10次");
 $.idx = ($.idx = ($.getval('zqSuffix') || '1') - 1) > 0 ? ($.idx + 1 + '') : ''; // 账号扩展字符
-var min = $.getdata('zqsharemin') || 6; //分享最少次数
-var max = $.getdata('zqsharemax') || 10; //分享最多次数
-min=parseInt(min);
-max=parseInt(max);
-//随机生成分享次数 
-
-
-const isRequest = typeof $request != "undefined"
-
-
-if ($.isNode() ) {
+let min = $.getdata('zqsharemin') || 6; //分享最少次数
+let max = $.getdata('zqsharemax') || 10; //分享最多次数
+let zqurl = $.getdata('shareurl_zq');
+ 
+if ($.isNode()){
 	zqurl = process.env.WECHATURL;
+	min=9;
+	max=12;
 }
-else{
-	zqurl = $.getdata('shareurl_zq');
+
+if ($.isNode() && !zqurl) {
+    $.msg($.name, "您未获取分享助力请求，请先获取");
+	$.done();
+}
+timeZone = new Date().getTimezoneOffset() / 60;
+timestamp = Date.now() + (8 + timeZone) * 60 * 60 * 1000;
+bjTime = new Date(timestamp).toLocaleString('zh', {
+    hour12: false,
+    timeZoneName: 'long'
+});
+
+if (isGetCookie = typeof $request !==`undefined`) {	//定义变量$request，自动开始获取cookie
+   getUrl();
+   $.done()
+}else{
+	console.log(`\n === 脚本执行 ${bjTime} ===\n`);
+	zqfx();
+	//$.done()
 }
 
-isRequest ? getUrl() : main();
-//if (!request) getShareInfo();
 
+//const isRequest = typeof $request != "undefined"
 
-//分享数据url获取
-async function getUrl() {
+//isRequest ? getUrl() : main();
+
+//分享url获取
+function getUrl() {
+	try {
     if ($request.headers && $request.url.indexOf("script.baertt.com/count2") > -1) {
       var url = $request.url;
       var s_si = url.match(/si=(.*?)&/)[1];
       if (url) $.setdata(url,'shareurl_zq'+ $.idx);
       console.log("url:" + url);
       console.log("s_si:" + s_si);
-      $.msg("中青分享", "", `助力url获取成功`);	  
+      $.msg("中青分享", "", `助力url获取成功\n关闭页面，运行cron`);	  
 	}
 	else {
          $.notify("中青分享", "", "️url获取失败");
 	}
-
+	}
+	catch (eor) {
+		console.log("err" + eor);
+		$.msg("中青数据分享url", "", "️获取失败");
+  }
  $.done();
   
 }
-//分享数据cron运行
-async function main() {
+//分享cron
+async function zqfx() {
+	try {
 	if (zqurl.indexOf("script.baertt.com/count2") > -1) {
-		//var url = zqurl;
-		var s_si = zqurl.match(/si=(.*?)&/)[1];
-		console.log("url:" + zqurl);
+		var url = zqurl;
+		var s_si = url.match(/si=(.*?)&/)[1];
+		console.log("url:" + url);
 		console.log("s_si:" + s_si);
-		rand = Math.floor(Math.random()*(max-min+1))+min;		
+		min=parseInt(min);
+		max=parseInt(max);		
 		console.log("设置最少助力次数:" + min);
 		console.log("设置最大助力次数:" + max);
-		console.log("随机助力次数:" + rand);
+		rand = Math.floor(Math.random()*(max-min+1))+min+1;		
 		if (rand > 13) rand =13;
 		let tmp=rand-1;
+		console.log("随机助力次数:" + tmp);
+
 		$.msg("中青分享", "", `助力url读取成功\n本次助力${tmp}次`);	  
 		//$.msg("中青分享", "", "数据获取成功");
 		for(let i=1;i<rand;i++){
@@ -81,8 +101,13 @@ async function main() {
 		}
 
 	} else {
-        $.notify("中青分享", "", "️url错误，请重新抓取");
+        $.notify("中青分享", "", "️url获取失败");
 	}
+	}
+	catch (eor) {
+		console.log("err" + eor);
+		$.msg("中青数据分享失败", "", "️");
+  }
   $.done();
 }
 async function postShareInfoa(o_url,o_si, num) {
