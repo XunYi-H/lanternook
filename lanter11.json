@@ -222,7 +222,8 @@
       "keys": [
         "shareurl_zq",
         "zqsharemin",
-        "zqsharemax"
+        "zqsharemax",
+        "shareurl_jc"
       ],
       "settings": [
         {
@@ -245,6 +246,13 @@
           "name" : "最多次数",
           "type" : "number",
           "desc" : "定义最多分享次数"
+        },
+        {
+          "id": "shareurl_jc",
+          "name": "晶彩分享链接",
+          "val": "",
+          "type": "text",
+          "desc": "晶彩分享时获取的链接"
         }
       ],
       "author": "@sunert",
