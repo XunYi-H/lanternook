@@ -137,7 +137,11 @@
     {
             "id": "dsj",
             "name": "电视家APP",
-            "keys": ["dsjheader","dsjheader2","dsjheader3"],
+            "keys": [
+              "dsjheader",
+                     "dsjheader2",
+                     "dsjheader3"
+            ],
             "author": "@ziye",
             "settings": [{
                     "id": "dsjSuffix",
