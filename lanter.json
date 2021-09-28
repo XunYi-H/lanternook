@@ -1,10 +1,9 @@
 {
   "id": "lanter",
   "name": "测试脚本订阅",
-  "author": "@lxk0301",
+  "author": "@lanter11",
   "icon": "https://avatars0.githubusercontent.com/u/21308593?s=52&v=4",
-  "repo": "https://github.com/lxk0301/jd_scripts/",
-  "apps": [
+   "apps": [
     {
       "id": "JD_Cookies",
       "name": "京东多账号 Ck 管理",
@@ -39,46 +38,7 @@
       "repo": "https://github.com/dompling/Script",
       "script": "https://raw.githubusercontent.com/dompling/Script/master/jd/JD_extra.js"
     },
-    {
-      "id": "xmSports",
-      "name": "小米运动",
-      "keys": [
-        "xmSportsToken",
-        "xmMinStep",
-        "xmMaxStep"
-      ],
-      "settings": [
-        {
-          "id": "xmSportsToken",
-          "name": "小米运动Token",
-          "val": "",
-          "type": "text",
-          "desc": "小米运动登录时获取的token"
-        },
-        {
-          "id": "xmMinStep",
-          "name": "最小运动步数",
-          "val": "19000",
-          "type": "text",
-          "desc": "需要修改最小的运动步数的数字,例如:19000"
-        },
-        {
-          "id": "xmMaxStep",
-          "name": "最大运动步数",
-          "val": "25000",
-          "type": "text",
-          "desc": "需要修改最小的运动步数的数字,例如:25000"
-        }
-      ],
-      "author": "@lxk0301",
-      "repo": "https://github.com/lxk0301/jd_scripts",
-      "script": "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/backUp/xmSports.js",
-      "icons": [
-        "https://raw.githubusercontent.com/58xinian/icon/master/xmyd_mini.png",
-        "https://raw.githubusercontent.com/58xinian/icon/master/xmyd.png"
-      ]
-    },
-   {
+     {
       "id": "didi_fruit",
       "name": "滴滴橙心果园",
       "keys": [
@@ -105,34 +65,6 @@
       "author": "@passerby-b",
       "repo": "https://gitee.com/passerby-b/javascript/raw/master/JD/passerby-b.boxjs.json",
       "script": "https://raw.githubusercontent.com/passerby-b/didi_fruit/main/dd_fruit.js"
-    },
-    {
-      "id": "ks_fruit",
-      "name": "快手果园",
-      "keys": [
-        "kscookies"
-      ],
-      "descs_html": [
-        "填写cookie,多账号用英文逗号(,)分开"
-      ],
-      "settings": [
-        {
-          "id": "kscookies",
-          "name": "kscookies",
-          "val": "",
-          "type": "textarea",
-          "autoGrow": true,
-          "rows": 8,
-          "desc": "kscookies"
-        }
-      ],
-      "icons": [
-        "https://gitee.com/passerby-b/javascript/raw/master/icon/ks.png",
-        "https://gitee.com/passerby-b/javascript/raw/master/icon/ks.png"
-      ],
-      "author": "@passerby-b",
-      "repo": "https://gitee.com/passerby-b/javascript/raw/master/JD/passerby-b.boxjs.json",
-      "script": "https://raw.githubusercontent.com/passerby-b/ks_fruit/main/ks_fruit.js"
     },
     {
             "id": "dsj",
