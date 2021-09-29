@@ -129,8 +129,10 @@
             "name": "电视家APP",
             "keys": [
               "dsjheader",
-                     "dsjheader2",
-                     "dsjheader3"
+              "dsjheader2",
+              "dsjheader3",
+              "dsjheader4",
+              "dsjheader5"
             ],
             "author": "@ziye",
             "settings": [{
