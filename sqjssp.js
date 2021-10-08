@@ -4,29 +4,18 @@
 
 const jsname='极速版1.05刷视频'
 const $ = Env(jsname);
-!(async () => {
-if (typeof $request !== "undefined") {
-     getjsspbody();
-     $.done()
- }else {
-	 console.log(`[jsname] 请打开极速版视频重写，打开极速版福利中心看视频，看完一个视频会自动执行。\n`);
-	 $.done()
-}
-})()
-.catch((e) => $.logErr(e))
-.finally(() => $.done())
+let logs=true;
 
- 
 async function getjsspbody() {
-	if ($request && $request.url.match(/\/api\/ad\/v1\/api\/prize\/lottery/)  && $request.body.indexOf("deliveryId=") >= 0 && $request.body.indexOf("platform=1")>=0) {
+	if ($request && $request.url.indexOf("prize") >= 0 && $request.url.indexOf("lottery") >= 0  && $request.body.indexOf("deliveryId=") >= 0 && $request.body.indexOf("platform=1")>=0) {
 	const shuqijsspbodyVal = $request.body;
     if (shuqijsspbodyVal) {
 		$.setdata(shuqijsspbodyVal, "shuqijsspbody");
-        $.log(`[jsname] 获取极速版视频shuqijsspbodyVal✅: 成功, ${shuqijsspbodyVal}`);
-        $.msg(jsname, `获取极速版视频shuqijsspbodyVal: 成功🎉`, ``);
-		for (let i = 0; i < 3; i++) {
+        $.log(`[${jsname}] 获取极速版视频shuqijsspbodyVal✅: 成功, ${shuqijsspbodyVal}`);
+        $.msg(jsname, `获取极速版视频shuqijsspbodyVal: 成功`, ``);
+		for (let i = 0; i < 9; i++) {
 			console.log(`🏠 开始刷第${i+1}条视频奖励\n`)
-			await jsvedio(shuqijsspbodyVal);
+			await jsvedioreward(shuqijsspbodyVal);
 			await $.wait(1000);
 		}
         $.done();
@@ -35,7 +24,7 @@ async function getjsspbody() {
 }
 
 //极速版视频奖励
-function jsvideo(shuqijsspbodyVal,timeout = 0) {
+function jsvideoreward(shuqijsspbodyVal,timeout = 0) {
     return new Promise((resolve) => {
         setTimeout(() => {
             let url = {
@@ -55,11 +44,11 @@ function jsvideo(shuqijsspbodyVal,timeout = 0) {
             }
             $.post(url, async (err, resp, data) => {
                 try {
-                    if (logs) $.log(`${O}, 极速版视频奖励🚩: ${decodeUnicode(data)}`);
-                    $.jsvideo = JSON.parse(data);
-                    if ($.jsvideo.status == 200) {
-                        console.log(`极速版视频奖励：获得${$.jsvideo.data.prizeName}\n`);
-                        $.message += `【极速版视频奖励】：获得${$.jsvideo.data.prizeName}\n`;
+                    if (logs) $.log(`极速版视频奖励🚩: ${decodeUnicode(data)}`);
+                    const result = JSON.parse(data);
+                    if (result.status == 200) {
+                        console.log(`极速版视频奖励：获得${result.data.prizeName}\n`);
+                        $.msg(`【极速版视频奖励】：获得${result.data.prizeName}\n`);
                     }
                 } catch (e) {
                     $.logErr(e, resp);
@@ -70,6 +59,29 @@ function jsvideo(shuqijsspbodyVal,timeout = 0) {
         }, timeout)
     })
 }
+
+!(async () => {
+if (typeof $request !== "undefined") {
+     getjsspbody();
+     $.done()
+ }else {
+	 console.log(`[jsname] 请先打开极速版视频重写，打开极速版福利中心看视频，看完一个视频会自动执行。\n`);
+	 //$.done()
+	 let shuqijsspbodyVal=$.getdata('shuqijsspbody');
+	 if (shuqijsspbodyVal){
+		for (let i = 0; i < 9; i++) {
+			console.log(`🏠 开始刷第${i+1}条视频奖励\n`)
+			await jsvideoreward(shuqijsspbodyVal);
+			await $.wait(1000);
+		}
+	 }
+}
+})()
+.catch((e) => $.logErr(e))
+.finally(() => $.done())
+
+ 
+
 /*
 //极速版视频任务
 function jsvideolist(timeout = 0) {
