@@ -28,7 +28,7 @@ if ($request && $request.url.indexOf("signInAction") >= 0 && $request.body.index
 }
 	
 //书旗4.26福利中心看视频vedioreward426  https://api-access.pangolin-sdk-toutiao.com/api/ad/union/sdk/reward_video/reward/
-if($request&&request.url.match(/\/api\-access.pangolin\-sdk\-toutiao.com\/api\/ad\/union\/sdk\/reward_video\/reward/)) {
+if($request&&request.url.match(/\/api\-access.pangolin\-sdk\-toutiao.com\/api\/ad\/union\/sdk\/reward_video\/reward)) {
 	bodyVal = $request.body;
     if (bodyVal) $.setdata(bodyVal, 'shuqi426vedioreward');
      $.log(`[${jsname}] 获取426vediorewardkey请求: 成功🎉,key: ${bodyVal}`);
@@ -36,7 +36,7 @@ if($request&&request.url.match(/\/api\-access.pangolin\-sdk\-toutiao.com\/api\/a
 }
 
 //4.5书旗福利中心收气泡 receive https://ocean.shuqireader.com/api/prizecenter/xapi/prize/manual/receive
-if($request&&request.url.match(/\/ocean.shuqireader.com\/api\/prizecenter\/xapi\/prize\/manual\/receive/)) {
+if($request&&request.url.match(/\/ocean.shuqireader.com\/api\/prizecenter\/xapi\/prize\/manual\/receive)) {
 	bodyVal = $request.body;
     if (bodyVal) $.setdata(bodyVal, 'shuqireceive');
      $.log(`[${jsname}] 获取receivekey请求: 成功🎉,key: ${bodyVal}`);
