@@ -23,7 +23,7 @@ async function getjsspbody() {
     if (shuqijsspbodyVal) {
 		$.setdata(shuqijsspbodyVal, "shuqijsspbody");
         $.log(`[jsname] 获取极速版视频shuqijsspbodyVal✅: 成功, ${shuqijsspbodyVal}`);
-        //$.msg(jsname, `获取极速版视频shuqijsspbodyVal: 成功🎉`, ``);
+        $.msg(jsname, `获取极速版视频shuqijsspbodyVal: 成功🎉`, ``);
 		for (let i = 0; i < 3; i++) {
 			console.log(`🏠 开始刷第${i+1}条视频奖励\n`)
 			await jsvedio(shuqijsspbodyVal);
