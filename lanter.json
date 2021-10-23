@@ -75,7 +75,11 @@
               "txzxgck2",
               "txwzqck2",                     
               "txzxgck3",
-              "txwzqck3"
+              "txwzqck3",
+              "txzxgck4",
+              "txwzqck4",
+              "txzxgck5",
+              "txwzqck5"     
             ],
             "author": "@ziye",
             "settings": [{
@@ -83,7 +87,7 @@
                     "name": "当前账号",
                     "val": "1",
                     "type": "number",
-                    "desc": "当前抓取ck记录的账号序号，如：1、2、3、"
+                    "desc": "当前抓取ck记录的账号序号，如：1、2、3"
                 },                               
                 {
                     "id": "txwzqCount",
@@ -92,6 +96,13 @@
                     "type": "number",
                     "desc": "指定任务最多跑几个账号，根据抓取的账号数据个数来设值"
                 },
+                {
+                    "id": "txwzqCASH",
+                    "name": "提现选择",
+                    "val": "0",
+                    "type": "number",
+                    "desc": "可设置0 1 5 默认0不提现"
+                },                 
                 {
                     "id": "txwzqXH",
                     "name": "循环获取CK",
