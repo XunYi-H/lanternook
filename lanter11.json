@@ -42,7 +42,222 @@
       "name": "小米运动",
       "keys": [
         "xmSportsToken",
-        "xmMinStep",{{{
+        "xmMinStep",{{{{
+  "id": "lanter11",
+  "name": "自用脚本订阅",
+  "author": "lanter11",
+  "icon": "https://raw.githubusercontent.com/58xinian/icon/master/xmyd_mini.png",
+  "apps": [
+      {
+      "id": "JD_Cookies",
+      "name": "京东签到",
+      "keys": ["CookiesJD"],
+      "descs_html": [
+        "请勿随意在输入框修改内容，建议通过脚本去获取cookie，若要修改，请按照JSON 格式修改。",
+        "使用方式【<a href=\"https://home.m.jd.com/myJd/newhome.action\">个人中心</a>】获取对应的数据Code"
+      ],
+    "scripts": [{
+      "name": "京东签到",
+      "script": "https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js"
+    }],
+      "settings": [
+        {
+          "id": "CookiesJD",
+          "name": "CK 列表",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 9,
+          "val": "[\n  {\n    \"cookie\": \"此处填写账号1 Cookie\"\n  },\n  {\n    \"cookie\": \"此处填写账号2 Cookie\",\n    \"jrBody\": \"此处填写账号2 钢镚Body\"\n  }\n]",
+          "placeholder": "[ {\"cookie\": \"pt_key=xxx;pt_pin=yyy;\", \"jrBody\": \"reqData=zzz\"}  ]",
+          "desc": "Cookie和钢镚签到Body列表, 如需修改请严格按照JSON格式填写; \"cookie\"为必须, 其他为可选."
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/Orz-3/mini/master/jd.png",
+        "https://raw.githubusercontent.com/Orz-3/task/master/jd.png"
+      ],
+      "author": "@dompling",
+      "repo": "https://github.com/dompling/Script",
+      "script": "https://raw.githubusercontent.com/dompling/Script/master/jd/JD_extra.js"
+    },
+    {
+      "id": "xmSports",
+      "name": "小米运动",
+      "keys": [
+        "xmSportsToken",
+        "xmMinStep",
+        "xmMaxStep"
+      ],
+      "settings": [
+        {
+          "id": "xmSportsToken",
+          "name": "小米运动Token",
+          "val": "",
+          "type": "text",
+          "desc": "小米运动登录时获取的token"
+        },
+        {
+          "id": "xmMinStep",
+          "name": "最小运动步数",
+          "val": "19000",
+          "type": "text",
+          "desc": "需要修改最小的运动步数的数字,例如:19000"
+        },
+        {
+          "id": "xmMaxStep",
+          "name": "最大运动步数",
+          "val": "25000",
+          "type": "text",
+          "desc": "需要修改最小的运动步数的数字,例如:25000"
+        }
+      ],
+      "author": "@lxk0301",
+      "repo": "https://github.com/lxk0301/jd_scripts",
+      "script": "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/backUp/xmSports.js",
+      "icons": [
+        "https://raw.githubusercontent.com/58xinian/icon/master/xmyd_mini.png",
+        "https://raw.githubusercontent.com/58xinian/icon/master/xmyd.png"
+      ]
+    },
+	    {
+      "id": "hlhb",
+      "name": "欢乐红包CK数据",
+      "keys": [
+       "hbsign",
+	   "hbtoken",
+	   "hbggck"
+      ],
+      "settings": [
+        {
+		"id": "hbsign",
+		"name": "hbsign数据",
+		"keys": "",
+		"type": "text",
+		"desc": "默认"
+        },
+        {
+		"id": "hbtoken",
+		"name": "hbtoken数据",
+		"keys": "",
+		"type": "text",
+		"desc": "默认"
+        }
+      ],
+      "author": "@lxk0301",
+      "repo": "https://github.com/lxk0301/jd_scripts",
+      "script": "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/backUp/xmSports.js",
+      "icons": [
+        "https://raw.githubusercontent.com/58xinian/icon/master/xmyd_mini.png",
+        "https://raw.githubusercontent.com/58xinian/icon/master/xmyd.png"
+      ]
+    },
+    {
+      "id": "joy_run",
+      "name": "宠汪汪Token",      
+      "keys": [
+        "jdJoyRunToken"
+      ],
+      "descs_html": [
+        "填写LKYLToken"
+      ],
+      "settings": [
+        {
+          "id": "jdJoyRunToken",
+          "name": "宠汪汪Token",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 3,
+           "placeholder": "jdJoyRunToken",
+          "desc": "LKYLToken"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/Orz-3/mini/master/jd.png",
+        "https://raw.githubusercontent.com/Orz-3/task/master/jd.png"
+      ],
+      "author": "@lanter",
+      "script": "joy_getToken.js"
+    },
+   
+{
+    "id": "PushBoxjsTask",
+    "name": "V2pTask",
+    "keys": ["v2purl", "v2token", "v2pblacklist"],
+    "settings": [{
+        "id": "v2ptaskupdate",
+        "name": "V2P上传任务",
+        "val": false,
+        "type": "boolean",
+        "desc": "打开才会上传定时任务,用来刚开始使用的时候"
+      },
+      {
+        "id": "jdtaskupdate",
+        "name": "京东上传任务",
+        "val": false,
+        "type": "boolean",
+        "desc": "用来打开上传定时任务包含京东系列"
+      },
+      {
+        "id": "v2pblacklist",
+        "name": "上传黑名单",
+        "val": "",
+        "type": "textarea",
+        "desc": "删除你要上传的任务对象"
+      },
+      {
+        "id": "v2purl",
+        "name": "主页地址",
+        "val": "",
+        "type": "text",
+        "desc": "请到设置查询,例子:http://192.168.1.102:12521"
+      },
+      {
+        "id": "v2token",
+        "name": "WEBHOOK TOKEN",
+        "val": "",
+        "type": "text",
+        "desc": "请到设置查询,例子:a8c259b2-67fe-D-7bfdf1f55cb3"
+      }
+    ],
+    "author": "@cenbomin",
+    "repo": ["https://raw.githubusercontent.com/CenBoMin/GithubSync"],
+    "script": "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/ELECV2PJS/PushTask_elecV2p.js",
+    "icons": ["https://raw.githubusercontent.com/Ariszy/Private-Script/master/img/elecv2p-mini.png", "https://raw.githubusercontent.com/Ariszy/Private-Script/master/img/elecv2p.png"]
+    }, 
+    {
+    "id": "PushBoxjsCookie",
+    "name": "V2pCookie",
+    "keys": ["v2purl", "v2token"],
+    "settings": [{
+        "id": "v2pcookieupdate",
+        "name": "V2P上传任务",
+        "val": false,
+        "type": "boolean",
+        "desc": "打开才会上传cookie,用来刚开始使用的时候。"
+      }, {
+        "id": "v2purl",
+        "name": "主页地址",
+        "val": "",
+        "type": "text",
+        "desc": "请到设置查询,例子:http://192.168.1.102:12521"
+      },
+      {
+        "id": "v2token",
+        "name": "WEBHOOK TOKEN",
+        "val": "",
+        "type": "text",
+        "desc": "请到设置查询,例子:a8c259b2-67fe-D-7bfdf1f55cb3"
+      }
+    ],
+    "author": "@cenbomin",
+    "repo": ["https://raw.githubusercontent.com/CenBoMin/GithubSync"],
+    "script": "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/ELECV2PJS/PushBoxjsCookie_elecV2p.js",
+    "icons": ["https://raw.githubusercontent.com/Ariszy/Private-Script/master/img/elecv2p-mini.png", "https://raw.githubusercontent.com/Ariszy/Private-Script/master/img/elecv2p.png"]
+  }    
+  ]
+}
   "id": "lanter",
   "name": "测试脚本订阅",
   "author": "@lanter11",
