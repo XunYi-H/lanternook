@@ -77,25 +77,27 @@
       ]
     },
    {
-      "id": "didi_fruit",
-      "name": "滴滴橙心果园",
+      "id": "hlhb",
+      "name": "滴欢乐红包CK数据",
       "keys": [
-        "ddtoken"
+       "hbsign","hbtoken","hbggck"
       ],
       "descs_html": [
         "填写token,多账号用英文逗号(,)分开"
       ],
-      "settings": [
-        {
-          "id": "ddtoken",
-          "name": "token",
-          "val": "",
-          "type": "textarea",
-          "autoGrow": true,
-          "rows": 8,
-          "desc": "token"
-        }
-      ],
+"settings": [{
+                                    "id": "hbsign",
+                                    "name": "hbsign数据",
+                                    "keys": "",
+                                    "type": "number",
+                                    "desc": "默认"
+                                },{
+                                    "id": "hbtoken",
+                                    "name": "hbtoken数据",
+                                    "keys": "",
+                                    "type": "number",
+                                    "desc": "默认"
+                                }],
       "icons": [
         "https://gitee.com/passerby-b/javascript/raw/master/icon/didi.png",
         "https://gitee.com/passerby-b/javascript/raw/master/icon/didi.png"
@@ -132,200 +134,7 @@
       "author": "@lanter",
       "script": "joy_getToken.js"
     },
-    
-    {
-      "id": "Youth",
-      "name": "中青看点",      
-      "author" : "@sunert",
-      "descs_html": [
-      "<h4 align=\"center\">获取Cookie以及脚本配置请查看<a href=\"https://github.com/Sunert/Scripts/raw/master/TaskConf/youth/readme.md\">配置说明</a></h4>",
-      "<br />",
-      "<p>其中zq_nick、zqcash和zqcard为昵称、提现金额和早起打卡开关，无需另外获取，相关项设置后自动生成，cashurl_zq和cashbody_zq为提现请求，获取后方可自动提现，可选</p>"
-    ],
-      "keys" : [
-        "zq_nick",
-        "youthheader_zq",
-        "read_zq",
-        "readtime_zq",
-        "youth_autoread",
-        "autotime_zq",
-        "youth_start",
-        "youth_look",
-        "cashurl_zq",
-        "cashbody_zq",
-        "zqcash",
-        "zqcard"
-      ],
-      "repo" : "https://github.com/Sunert/Scripts/blob/master/Task/youth.js",
-      "id" : "youth",
-      "script" : "https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js",
-      "settings" : [
-        {
-          "id" : "zqcard",
-          "val" : "false",
-          "name" : "打卡赚钱",
-          "type" : "boolean",
-          "desc" : "每日打卡报名及早起打卡"
-        },
-        {
-          "id" : "zqtime",
-          "val" : "05",
-          "name" : "打卡时间",
-          "type" : "number",
-          "desc" : "每日早起打卡时间"
-        },
-        {
-          "id" : "delay_rotary_zq",
-          "val" : "10",
-          "name" : "转盘时间间隔",
-          "type" : "number",
-          "desc" : "间隔时间设置，如1秒填1即可"
-        },
-        {
-          "id" : "notifytimes",
-          "val" : "",
-          "name" : "通知频率 (点击查看设置说明)",
-          "type" : "number",
-          "desc" : "设定通知频率，前三次为全部通知，之后转盘次数/设定频率整除时通知，如设置0为无通知，设置1为全部通知，设置其他数可整除余0时通知，默认值50"
-        },
-        {
-          "id" : "zqcash",
-          "val" : "10",
-          "name" : "提现金额",
-          "type" : "radios",
-          "desc" : "自动提现金额需和获取提现请求保持一致",
-          "items" : [
-            {
-              "key" : "10",
-              "label" : "10元"
-            },
-            {
-              "key" : "30",
-              "label" : "30元"
-            },
-            {
-              "key" : "100",
-              "label" : "100元"
-            }
-          ]
-        }
-      ],
-      "name" : "中青看点",
-      "icons" : [
-        "https://raw.githubusercontent.com/Orz-3/mini/master/youth.png",
-        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png"
-      ]
-    },
-    {
-      "id": "youthShareRead",
-      "name": "中青分享",
-      "keys": [
-        "shareurl_zq",
-        "zqsharemin",
-        "zqsharemax",
-        "shareurl_jc"
-      ],
-      "settings": [
-        {
-          "id": "shareurl_zq",
-          "name": "中青分享链接",
-          "val": "",
-          "type": "text",
-          "desc": "中青分享时获取的链接"
-        },
-        {
-          "id" : "zqsharemin",
-          "val" : "6",
-          "name" : "最少次数",
-          "type" : "number",
-          "desc" : "定义最少分享次数"
-        },
-        {
-          "id" : "zqsharemax",
-          "val" : "13",
-          "name" : "最多次数",
-          "type" : "number",
-          "desc" : "定义最多分享次数"
-        },
-        {
-          "id": "shareurl_jc",
-          "name": "晶彩分享链接",
-          "val": "",
-          "type": "text",
-          "desc": "晶彩分享时获取的链接"
-        }
-      ],
-      "author": "@sunert",
-      "repo": "https://github.com/Sunert/Scripts/blob/master/Task/youthShareRead.js",
-      "script": "https://github.com/Sunert/Scripts/blob/master/Task/youthShareRead.js",
-      "icons": [
-        "https://raw.githubusercontent.com/Orz-3/mini/master/youth.png",
-        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png"
-      ]
-    },
-     {
-      "id": "kuaishou",
-      "name": "快手极速版",
-      "author": "@sunert",
-      "keys": ["cookie_ks", "cookies_ks"],
-      "descs_html": [
-        "多账号ck脚本地址【<a href=\"https://raw.githubusercontent.com/ztxtop/x/main/NE.cookie.js\">Cookie采集器</a>】",
-        "注：NE工具中直接执行脚本将移除重复的Cookie"
-      ],
-      "settings": [{
-        "id": "cookie_ks",
-        "name": "账号1",
-        "val": "",
-        "type": "text",
-        "desc": "快手账号1 Cookie"
-      }, {
-        "id": "cookies_ks",
-        "name": "CK 列表",
-        "val": "",
-        "type": "textarea",
-        "autoGrow": true,
-        "rows": 8,
-        "desc": "快手扩展CK 列表 (JSON 格式)"
-      }],
-      "repo": "https://gitee.com/Sunert/Scripts/blob/master/Task/kuaishou.js",
-      "icons": ["https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/kuaishou.png", "https://raw.githubusercontent.com/Orz-3/mini/master/Color/kuaishou.png"],
-      "script": "https://raw.githubusercontent.com/ztxtop/x/main/kuaishou.js"
-    },
-    {
-      "id": "jdAllck",
-      "name": "京东CK集合",
-      "author": "@ztxtop",
-      "keys": ["CookieJD", "CookieJD2", "CookiesJD"],
-      "descs_html": [
-        "复制 <a href=\"https://bean.m.jd.com/bean/signIndex.action\">签到日历</a> 或 <a href=\"https://home.m.jd.com/myJd/newhome.action\">京东用户中心</a> 地址到浏览器打开，登录后可自动获取Cookie，没成功就登录后再次访问下之前复制的地址",
-        "管理野比NobyDa及毛哥lxk的京东账号ck 重写订阅地址【<a href=\"https://raw.githubusercontent.com/ztxtop/x/main/subscribe/rewrite-jd.plugin\">京东多账号CK订阅</a>】",
-        "注：Loon的订阅插件，QX使用需开启解析器；NE工具中直接执行脚本将移除重复的Cookie"
-      ],
-      "settings": [{
-        "id": "CookieJD",
-        "name": "账号1",
-        "val": "",
-        "type": "text",
-        "desc": "NobyDa的京东账号1 Cookie"
-      }, {
-        "id": "CookieJD2",
-        "name": "账号2",
-        "val": "",
-        "type": "text",
-        "desc": "NobyDa的京东账号2 Cookie"
-      }, {
-        "id": "CookiesJD",
-        "name": "CK 列表",
-        "val": "",
-        "type": "textarea",
-        "autoGrow": true,
-        "rows": 8,
-        "desc": "京东扩展CK 列表 (JSON 格式)"
-      }],
-      "repo": "https://gitee.com/Sunert/Scripts/blob/master/Task/NE.cookie.js",
-      "icons": ["https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/jd.png", "https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png"],
-      "script": "https://raw.githubusercontent.com/ztxtop/x/main/NE.cookie.js"
-    },
+   
 {
     "id": "PushBoxjsTask",
     "name": "V2pTask",
